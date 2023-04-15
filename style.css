@@ -1,14 +1,20 @@
 body{
   margin: 0;
   padding: 0;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
 /* wrapper */
 
 .kitano-container {
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   line-height: 1.75rem;
+  background-image: url(./img/kitano-bg.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 /* global */
@@ -19,8 +25,12 @@ body{
   letter-spacing: .5rem;
   text-align: center;
   margin-top: 2rem;
-  margin-bottom: 5rem;
-  color: #444;
+  margin-bottom: 3rem;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  -webkit-box-reflect: below -10px -webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0) 10%,rgba(0, 0, 0, 0.6));
+
 }
 
 /* header */
@@ -32,7 +42,8 @@ body{
   width: 100%;
   height: 100vh;
   display: table;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+  font-family: serif;
 }
 
 .hero-inner{
@@ -65,14 +76,17 @@ body{
   letter-spacing: .25rem;
 }
 
-/* concept area */
+.inner-wrap{
+  padding: .5rem;
+}
 
+/* concept area */
 .concept{
-  background: #fff;
+  background: rgba(255, 255, 255, .8);
   text-align: center;
   padding: 1rem;
   font-size: .875rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .concept aside{
@@ -137,6 +151,7 @@ body{
 
 .gallary{
   width: 100%;
+  height: 200px;
   text-align:center;
   aspect-ratio: 1/1;
   background-color: #444;
@@ -147,11 +162,15 @@ body{
 /* image-map */
 .image-map{
   padding: 1rem;
+  background-color: rgba(255, 255, 255, .8);
+  margin-bottom: 3rem;
+  font-size: .85rem;
+  text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 680px) {
   .image-map{
-    width: 750px;
+    width: 900px;
     margin : 0 auto;
   }
 }
@@ -281,7 +300,9 @@ body{
   max-width: 900px;
   margin: 0 auto;
   padding: 1rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
+  font-size: .85rem;
+  background-color: rgba(255, 255, 255, .8);
 }
 
 .columns {
@@ -290,14 +311,29 @@ body{
 }
 
 .columns > .card {
-  background-color: rgb(52, 168, 203);
+  /* background-color: #fff; */
   margin-bottom: 20px;
   width: 100%;
+  height: auto;
   text-align: center;
-  border-radius: .75rem;
-  outline: 1px solid gray;
   outline-offset: -1px;
   min-height: 350px;
+  border-bottom: 1px solid grey;
+}
+
+.columns > .card:last-child{
+  border-bottom: 0;
+}
+
+@media screen and (min-width: 680px) {
+  .columns > .card {
+    border-bottom: 0;
+  }
+
+  .columns .card:nth-child(2){
+    border-left:1px solid grey;
+    border-right:1px solid grey;
+  }
 }
 
 .columns > .card > .card-content{
@@ -305,14 +341,16 @@ body{
 }
 
 .columns > .card > h4 {
-  color: white;
+  color: #444;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .columns > .card > .price {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   padding: 1rem;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 .columns > .card > .price > p > .yen,
@@ -331,7 +369,8 @@ body{
 .columns > .card > .card-content {
   border-radius: 0 0 .75rem .75rem;
   padding: 1rem;
-  background-color: #fff;
+  /* background-color: #fff; */
+  height: auto;
 }
 
 @media screen and (min-width: 681px) {
@@ -345,15 +384,18 @@ body{
 
 /* service */
 .service{
+  padding-top: 2rem;
   max-width: 900px;
   margin: 0 auto;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
+  background-color: rgba(255, 255, 255, .8);
 }
 
 .service-row{
   gap: 1rem;
   display: flex;
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 .service img{
@@ -361,12 +403,12 @@ body{
 }
 
 .service-inner{
-  border-radius: 1rem;
   width: 33%;
   padding: 1rem;
   text-align: center;
   aspect-ratio: 1/1;
   margin: 0 auto;
+  border-bottom: 1px solid grey;
 }
 
 .service-title{
@@ -380,6 +422,31 @@ body{
   font-weight: 400;
 }
 
+@media (max-width: 680px) {
+  .service-row{
+    flex-direction: column;
+  }
+
+  .service-inner{
+    text-align: center;
+    width: auto;
+    aspect-ratio: auto;
+    margin-bottom: 3rem;
+  }
+
+  .service-inner > .service-body{
+    padding: 1rem;
+  }
+
+  .service-row:last-child .service-inner:nth-child(n+2){
+    display: none;
+  }
+
+  .service-row:last-child .service-inner{
+    border-bottom: none;
+  }
+}
+
 /* .service-row:last-child .center,
 .service-row:last-child .right{
   border: .2rem #dfdfdf solid;
@@ -390,6 +457,11 @@ body{
   max-width: 900px;
   margin: 0 auto;
   margin-bottom: 5rem;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.faq .section-title{
+  padding-top: 2rem;
 }
 
 .faq .accordion {
@@ -421,11 +493,88 @@ body{
   overflow: hidden;
 }
 
+/* future */
+.future-wrap{
+  padding: .5rem;
+  /* background-color: rgba(255, 255, 255, .8); */
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 681px) {
+  .future-contents {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.future-wrap .section-title{
+  color: #fff;
+  margin-bottom: 0;
+  position: relative;
+  line-height: 1.2;
+  -webkit-box-reflect: below -10px -webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0) 10%,rgba(0, 0, 0, 0.6));
+}
+
+.future-wrap p:last-child{
+  color: #fff;
+  text-align: center;
+  line-height: 1.4;
+  -webkit-box-reflect: below -10px -webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0) 10%,rgba(0, 0, 0, 0.6));
+}
+
+.image-container {
+  position: relative;
+  padding: .5rem;
+}
+
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+.text-container span {
+  position: relative;
+  display: inline-block;
+  padding: 0 55px;
+}
+
+.text-container span:before, .text-container span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 1px;
+  background-color: black;
+}
+
+.text-container span:before {
+  left:0;
+}
+
+.text-container span:after {
+  right: 0;
+}
+
+.text-container p{
+  background: rgba(0, 0, 0, .5);
+  width: auto;
+  padding: 0 .5rem;
+  display: inline-block;
+  white-space: nowrap;
+  margin: .25rem;
+}
+
 /* company */
 .company {
   max-width: 900px;
   margin: 0 auto;
   margin-bottom: 5rem;
+  background-color: rgba(255, 255, 255, .8);
 }
 
 .company table tr th,
@@ -448,7 +597,7 @@ body{
   height: 3rem;
   border: none;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, .6);
   color: #fff;
   font-size: 1.5rem;
 }
