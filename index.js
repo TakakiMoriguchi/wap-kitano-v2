@@ -3,11 +3,13 @@ $(document).ready(function() {
   $('map').imageMapResize();
   $('area').on('click', function(e) {
     e.preventDefault();
-    var content = $(this).attr('title');
+    var content = $(this).attr('alt');
+    var description = $(this).attr('title');
     var modalHtml = '<div class="modal-overlay modal-open">' +
                     '<div class="modal-content">' +
                     '<img src="./img/modal/' + content + '.jpg"/>' +
                     '<p class="title">' + content + '</p>' +
+                    '<p class="description">' + description + '</p>' +
                     '<span class="modal-close"></span>' +
                     '</div></div>';
     $('body').append(modalHtml);
