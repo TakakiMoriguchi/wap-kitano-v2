@@ -4,7 +4,7 @@ showSlides(slideIndex);
 // 自動的にスライドを切り替えるためのタイマーをセットする
 let slideTimer = setInterval(function() {
   plusSlides(1);
-}, 3000);
+}, 6000);
 
 // スライドを手動で切り替えた場合、タイマーをリセットする
 function plusSlides(n) {
@@ -12,7 +12,7 @@ function plusSlides(n) {
   showSlides(slideIndex += n);
   slideTimer = setInterval(function() {
     plusSlides(1);
-  }, 3000);
+  }, 6000);
 }
 
 function currentSlide(n) {
@@ -20,7 +20,7 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
   slideTimer = setInterval(function() {
     plusSlides(1);
-  }, 3000);
+  }, 6000);
 }
 
 function showSlides(n) {

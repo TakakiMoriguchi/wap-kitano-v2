@@ -46,3 +46,9 @@ $(document).ready(function() {
     $(this).next(".panel").slideToggle("fast");
   });
 });
+
+// 360
+$(document).ready(function() {
+  $("#share-button").hide();
+  $(".ricoh-theta").hide();
+})

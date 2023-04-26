@@ -186,11 +186,6 @@ body{
 }
 
 @media screen and (min-width: 681px) {
-  .box {
-    width: calc(50% - 10px);
-    margin-right: 10px;
-  }
-
   .sp-video{
     display: none;
   }
@@ -770,4 +765,22 @@ body{
   background-color: rgba(0, 0, 0, .6);
   color: #fff;
   font-size: 1.5rem;
+}
+
+/* 360 */
+
+.wrap360{
+  margin-bottom: 1rem;
+}
+
+.ricoh-theta-spherical-image{
+  margin: 0 auto;
+}
+
+#share-button{
+  display: none;
+}
+
+.ricoh-theta{
+  display: none;
 }
