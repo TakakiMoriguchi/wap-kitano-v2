@@ -52,3 +52,12 @@ $(document).ready(function() {
   $("#share-button").hide();
   $(".ricoh-theta").hide();
 })
+
+// floor-map
+$(document).ready(function() {
+  $('.img-clickable').click(function() {
+    var targetId = $(this).data('target');
+    var newImageSrc = $(this).attr('src');
+    $('#' + targetId).attr('src', newImageSrc);
+  });
+});

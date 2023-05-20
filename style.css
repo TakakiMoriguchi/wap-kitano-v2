@@ -296,6 +296,194 @@ body{
   width: 100%;
 }
 
+/* floor-map */
+.floor-map{
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, .8);
+  margin-bottom: 3rem;
+  font-size: .85rem;
+}
+
+.title-area{
+  border-bottom: 1px solid #aaa;
+  text-align: left;
+  padding: .5rem;
+  margin-bottom: 1rem;
+}
+
+.title-area h2{
+  margin-bottom: 0;
+}
+
+.title-area span{
+  font-size: .75rem;
+}
+
+.img-area .img-clickable {
+  width: calc(33.33% - 10px);
+  margin-right: 10px;
+}
+
+.img-area .img-clickable:last-child {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 680px) {
+  .floor-map{
+    width: 900px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+
+  .floor-inner-wrap{
+    display: flex;
+    align-items: stretch;
+    /* align-items: flex-end; */
+  }
+
+  .left-content,
+  .right-content {
+    flex: 1;
+  }
+
+  .left-content{
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-area{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .left-content ul{
+    padding-left: 1rem;
+  }
+
+  .right-content > img{
+    aspect-ratio: 1/1;
+  }
+}
+
+/* for ladies */
+.for-ladies{
+  padding: 1rem;
+  background-color: rgba(211, 190, 208, .8);
+  margin-bottom: 3rem;
+  font-size: .85rem;
+}
+
+.fl-inner{
+  border: 3px dotted #fff;
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.ticket-grounp{
+  align-items: center;
+}
+
+.ticket {
+  max-width: 300px;
+  min-height: 100px;
+  margin: 0 auto;
+  background-color: rgba(255,217,0, .5);
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.4;
+  position: relative;
+}
+
+.ticket::before {
+  content: "";
+  top: 0;
+  left: 0;
+  border-bottom: 4em solid transparent;
+  border-left: 4em solid rgba(193, 39, 72, .7);
+  position: absolute;
+  z-index: 100;
+}
+
+.ticket:first-child::after {
+  content: "特典１";
+  display: block;
+  top: 10px;
+  transform: rotate(-45deg);
+  color: #fff;
+  left: 0;
+  position: absolute;
+  z-index: 101;
+}
+
+.ticket:nth-child(2)::after {
+  content: "特典２";
+  display: block;
+  top: 10px;
+  transform: rotate(-45deg);
+  color: #fff; /* 文字色はここで変更 */
+  left: 0;
+  position: absolute;
+  z-index: 101;
+}
+
+.ticket-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.tokuten{
+  background-color: rgba(255, 0, 0, .5);
+  padding: .25rem;
+}
+
+.ticket-note {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 680px) {
+  .for-ladies{
+    width: 900px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+}
+
+/* usecase */
+.usecase{
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, .8);
+  margin-bottom: 3rem;
+  font-size: .85rem;
+}
+
+.usecase .persona{
+  font-weight: bold;
+  text-align: center;
+}
+
+.persona-body{
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.persona-body:last-child{
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 680px) {
+  .usecase{
+    width: 900px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+}
+
 /* scroll down */
 .scrolldown1{
   position:absolute;
